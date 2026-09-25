@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 :root {
-    --color-tarjeta: #ffffff;
-    --color-carrito: #e8e8e8;
+    --bg-producto: green;
+    --bg-carrito: blue;
+    --borde-stock-bajo: red
 }
 
 body {
@@ -30,8 +31,10 @@ header {
 }
 
 .catalogo {
-    flex: 3;
+  flex: 3;  
 }
+    
+
 
 .productos {
     display: flex;
@@ -46,11 +49,15 @@ header {
     border-radius: 4px;
     padding: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    background: var(--color-tarjeta)
+    background: var(--bg-producto);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
     
 }
 .producto:hover {
     transform: translateY(-5px);
+
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -65,9 +72,9 @@ header {
     border-radius: 8px;
     padding: 12px;
     min-height: 200px;
-    background: var(--color-carrito);
+    background: var(--bg-carrito);
 }
 
 .stock-bajo{
-    border-color: red;
+border: 4px solid var(--borde-stock-bajo);
 }
