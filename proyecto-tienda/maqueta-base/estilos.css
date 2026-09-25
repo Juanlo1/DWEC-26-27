@@ -61,3 +61,7 @@ header {
     min-height: 200px;
     background: var(--color-carrito);
 }
+
+.stock-bajo{
+    border-color: red;
+}
